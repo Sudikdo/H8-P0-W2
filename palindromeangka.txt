@@ -1,0 +1,19 @@
+function angkaPalindrome(num) {
+var i=0
+var out=''
+num ++
+n = num.toString()
+while(n[i] != n[n.length-1]){
+  out = parseInt(n)
+  out++
+  n = out.toString()
+}
+return n
+}
+
+// TEST CASES
+console.log(angkaPalindrome(8)); // 9
+console.log(angkaPalindrome(10)); // 11
+console.log(angkaPalindrome(117)); // 121
+console.log(angkaPalindrome(175)); // 181
+console.log(angkaPalindrome(1000)); // 1001

@@ -1,0 +1,22 @@
+function groupAnimals(animals) {
+var kelompok = [[],[],[],[]]
+for (i=0; i<animals.length; i++){
+  if (animals[i][0] == animals[0][0]){
+    kelompok[0].push(animals[i])
+  }else if (animals[i][0] == animals[1][0]){
+    kelompok[1].push(animals[i])
+  }else if (animals[i][0] == animals[2][0]){
+    kelompok[2].push(animals[i])
+  }else /*if (animals[i][0] == animals[3][0])*/{
+    kelompok[3].push(animals[i])
+  }
+
+}
+return kelompok.sort()
+}
+
+// TEST CASES
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
+// [ ['ayam', 'anoa'], ['cacing'], ['kuda', 'kancil'] ]
+console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'cicak' ]));
+// [ ['ayam', 'anoa'], ['cacing', 'cicak'], ['kuda', 'kancil'], ['unta'] ]
